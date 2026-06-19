@@ -1,7 +1,7 @@
-name: mass-ehr-dbt
+name: mass_ehr_dbt
 version: 1.0.0
 config-version: 2
-profile: mass-ehr-dbt
+profile: mass_ehr_dbt
 model-paths:
   - models
 analysis-paths:
@@ -15,5 +15,5 @@ macro-paths:
 snapshot-paths:
   - snapshots
 models:
-  mass-ehr-dbt:
+  mass_ehr_dbt:
     +materialized: view

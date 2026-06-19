@@ -1,4 +1,4 @@
-mass-ehr-dbt:
+mass_ehr_dbt:
   target: dev
   outputs:
     dev:

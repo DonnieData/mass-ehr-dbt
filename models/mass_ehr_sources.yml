@@ -1,0 +1,78 @@
+version: 2
+
+sources:
+  - name: massachusetts_ehr
+    database: RAW
+    schema: MASSACHUSETTS_EHR
+    tables:
+      - name: CONDITIONS
+        columns:
+          - name: START
+          - name: STOP
+          - name: PATIENT
+          - name: ENCOUNTER
+          - name: SYSTEM
+          - name: CODE
+          - name: DESCRIPTION
+
+      - name: ENCOUNTERS
+        columns:
+          - name: ID
+          - name: START
+          - name: STOP
+          - name: PATIENT
+          - name: ORGANIZATION
+          - name: PROVIDER
+          - name: PAYER
+          - name: ENCOUNTERCLASS
+          - name: CODE
+          - name: DESCRIPTION
+          - name: BASE_ENCOUNTER_COST
+          - name: TOTAL_CLAIM_COST
+          - name: PAYER_COVERAGE
+          - name: REASONCODE
+          - name: REASONDESCRIPTION
+
+      - name: PATIENTS
+        columns:
+          - name: ID
+          - name: BIRTHDATE
+          - name: DEATHDATE
+          - name: SSN
+          - name: DRIVERS
+          - name: PASSPORT
+          - name: PREFIX
+          - name: FIRST
+          - name: MIDDLE
+          - name: LAST
+          - name: SUFFIX
+          - name: MAIDEN
+          - name: MARITAL
+          - name: RACE
+          - name: ETHNICITY
+          - name: GENDER
+          - name: BIRTHPLACE
+          - name: ADDRESS
+          - name: CITY
+          - name: STATE
+          - name: COUNTY
+          - name: FIPS
+          - name: ZIP
+          - name: LAT
+          - name: LON
+          - name: HEALTHCARE_EXPENSES
+          - name: HEALTHCARE_COVERAGE
+          - name: INCOME
+
+      - name: PROCEDURES
+        columns:
+          - name: START
+          - name: STOP
+          - name: PATIENT
+          - name: ENCOUNTER
+          - name: SYSTEM
+          - name: CODE
+          - name: DESCRIPTION
+          - name: BASE_COST
+          - name: REASONCODE
+          - name: REASONDESCRIPTION
