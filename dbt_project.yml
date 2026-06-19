@@ -14,6 +14,14 @@ macro-paths:
   - macros
 snapshot-paths:
   - snapshots
+
+  
 models:
   mass_ehr_dbt:
-    +materialized: view
+
+    transform:
+      +database: transform  
+
+    present: 
+      +database: present 
+    
