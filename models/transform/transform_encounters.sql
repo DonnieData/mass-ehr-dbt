@@ -1,5 +1,5 @@
 -- Transform raw encounters into incremental model
--- --select transform_encounters
+-- Co-authored with CoCo
 
 {{ config(
     materialized='incremental',
@@ -10,5 +10,20 @@
 ) }}
 
 select 
-* 
+    ID,
+    "START",
+    "STOP",
+    PATIENT,
+    ORGANIZATION,
+    PROVIDER,
+    PAYER,
+    ENCOUNTERCLASS,
+    CODE,
+    DESCRIPTION,
+    BASE_ENCOUNTER_COST,
+    TOTAL_CLAIM_COST,
+    PAYER_COVERAGE,
+    REASONCODE,
+    REASONDESCRIPTION 
 from {{ source('massachusetts_ehr', 'ENCOUNTERS') }}
+
