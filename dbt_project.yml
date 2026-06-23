@@ -1,0 +1,27 @@
+name: mass_ehr_dbt
+version: 1.0.0
+config-version: 2
+profile: mass_ehr_dbt
+model-paths:
+  - models
+analysis-paths:
+  - analyses
+test-paths:
+  - tests
+seed-paths:
+  - seeds
+macro-paths:
+  - macros
+snapshot-paths:
+  - snapshots
+
+  
+models:
+  mass_ehr_dbt:
+
+    transform:
+      +database: transform  
+
+    model: 
+      +database: model 
+    

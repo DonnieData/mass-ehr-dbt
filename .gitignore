@@ -1,22 +1,4 @@
-# Python
-venv/
-.venv/
-env/
-__pycache__/
-*.pyc
-
-# dbt
+# Ignore dbt artifacts
 target/
-dbt_packages/
+dbt_modules/
 logs/
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# IDE
-.vscode/
-.idea/
-
-# Environment variables
-.env

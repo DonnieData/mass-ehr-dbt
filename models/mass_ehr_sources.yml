@@ -1,0 +1,191 @@
+version: 2
+
+sources:
+  - name: massachusetts_ehr
+    database: RAW
+    schema: MASSACHUSETTS_EHR
+    tables:
+      - name: CLAIMS
+        columns:
+          - name: ID
+          - name: PATIENTID
+          - name: PROVIDERID
+          - name: PRIMARYPATIENTINSURANCEID
+          - name: SECONDARYPATIENTINSURANCEID
+          - name: DEPARTMENTID
+          - name: PATIENTDEPARTMENTID
+          - name: DIAGNOSIS1
+          - name: DIAGNOSIS2
+          - name: DIAGNOSIS3
+          - name: DIAGNOSIS4
+          - name: DIAGNOSIS5
+          - name: DIAGNOSIS6
+          - name: DIAGNOSIS7
+          - name: DIAGNOSIS8
+          - name: REFERRINGPROVIDERID
+          - name: APPOINTMENTID
+          - name: CURRENTILLNESSDATE
+          - name: SERVICEDATE
+          - name: SUPERVISINGPROVIDERID
+          - name: STATUS1
+          - name: STATUS2
+          - name: STATUSP
+          - name: OUTSTANDING1
+          - name: OUTSTANDING2
+          - name: OUTSTANDINGP
+          - name: LASTBILLEDDATE1
+          - name: LASTBILLEDDATE2
+          - name: LASTBILLEDDATEP
+          - name: HEALTHCARECLAIMTYPEID1
+          - name: HEALTHCARECLAIMTYPEID2
+
+      - name: CLAIMS_TRANSACTIONS
+        columns:
+          - name: ID
+          - name: CLAIMID
+          - name: CHARGEID
+          - name: PATIENTID
+          - name: TYPE
+          - name: AMOUNT
+          - name: METHOD
+          - name: FROMDATE
+          - name: TODATE
+          - name: PLACEOFSERVICE
+          - name: PROCEDURECODE
+          - name: MODIFIER1
+          - name: MODIFIER2
+          - name: DIAGNOSISREF1
+          - name: DIAGNOSISREF2
+          - name: DIAGNOSISREF3
+          - name: DIAGNOSISREF4
+          - name: UNITS
+          - name: DEPARTMENTID
+          - name: NOTES
+          - name: UNITAMOUNT
+          - name: TRANSFEROUTID
+          - name: TRANSFERTYPE
+          - name: PAYMENTS
+          - name: ADJUSTMENTS
+          - name: TRANSFERS
+          - name: OUTSTANDING
+          - name: APPOINTMENTID
+          - name: LINENOTE
+          - name: PATIENTINSURANCEID
+          - name: FEESCHEDULEID
+          - name: PROVIDERID
+          - name: SUPERVISINGPROVIDERID
+
+      - name: CONDITIONS
+        columns:
+          - name: START
+          - name: STOP
+          - name: PATIENT
+          - name: ENCOUNTER
+          - name: SYSTEM
+          - name: CODE
+          - name: DESCRIPTION
+          - name: LOAD_TS
+          - name: DATA_SOURCE
+
+      - name: ENCOUNTERS
+        columns:
+          - name: ID
+          - name: START
+          - name: STOP
+          - name: PATIENT
+          - name: ORGANIZATION
+          - name: PROVIDER
+          - name: PAYER
+          - name: ENCOUNTERCLASS
+          - name: CODE
+          - name: DESCRIPTION
+          - name: BASE_ENCOUNTER_COST
+          - name: TOTAL_CLAIM_COST
+          - name: PAYER_COVERAGE
+          - name: REASONCODE
+          - name: REASONDESCRIPTION
+
+      - name: MEDICATIONS
+        columns:
+          - name: START
+          - name: STOP
+          - name: PATIENT
+          - name: PAYER
+          - name: ENCOUNTER
+          - name: CODE
+          - name: DESCRIPTION
+          - name: BASE_COST
+          - name: PAYER_COVERAGE
+          - name: DISPENSES
+          - name: TOTALCOST
+          - name: REASONCODE
+          - name: REASONDESCRIPTION
+
+      - name: PATIENTS
+        columns:
+          - name: ID
+          - name: BIRTHDATE
+          - name: DEATHDATE
+          - name: SSN
+          - name: DRIVERS
+          - name: PASSPORT
+          - name: PREFIX
+          - name: FIRST
+          - name: MIDDLE
+          - name: LAST
+          - name: SUFFIX
+          - name: MAIDEN
+          - name: MARITAL
+          - name: RACE
+          - name: ETHNICITY
+          - name: GENDER
+          - name: BIRTHPLACE
+          - name: ADDRESS
+          - name: CITY
+          - name: STATE
+          - name: COUNTY
+          - name: FIPS
+          - name: ZIP
+          - name: LAT
+          - name: LON
+          - name: HEALTHCARE_EXPENSES
+          - name: HEALTHCARE_COVERAGE
+          - name: INCOME
+
+      - name: PAYERS
+        columns:
+          - name: ID
+          - name: NAME
+          - name: OWNERSHIP
+          - name: ADDRESS
+          - name: CITY
+          - name: STATE_HEADQUARTERED
+          - name: ZIP
+          - name: PHONE
+          - name: AMOUNT_COVERED
+          - name: AMOUNT_UNCOVERED
+          - name: REVENUE
+          - name: COVERED_ENCOUNTERS
+          - name: UNCOVERED_ENCOUNTERS
+          - name: COVERED_MEDICATIONS
+          - name: UNCOVERED_MEDICATIONS
+          - name: COVERED_PROCEDURES
+          - name: UNCOVERED_PROCEDURES
+          - name: COVERED_IMMUNIZATIONS
+          - name: UNCOVERED_IMMUNIZATIONS
+          - name: UNIQUE_CUSTOMERS
+          - name: QOLS_AVG
+          - name: MEMBER_MONTHS
+
+      - name: PROCEDURES
+        columns:
+          - name: START
+          - name: STOP
+          - name: PATIENT
+          - name: ENCOUNTER
+          - name: SYSTEM
+          - name: CODE
+          - name: DESCRIPTION
+          - name: BASE_COST
+          - name: REASONCODE
+          - name: REASONDESCRIPTION

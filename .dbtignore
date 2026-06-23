@@ -1,0 +1,2 @@
+#ignore dir with dev scripts for dbt model. allow git tracking 
+dev_scripts/
